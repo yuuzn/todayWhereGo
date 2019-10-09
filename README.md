@@ -74,8 +74,7 @@
 * 夜も眠れなくなるような問題　随時
 * 俺たちのチーム　なし
 * 期間を見極める　◎
-![schedule]
-(https://github.com/yuuzn/todayWhereGo/blob/master/%E6%9C%9F%E9%96%93%E3%82%92%E8%A6%8B%E6%A5%B5%E3%82%81%E3%82%8B.png "schedule")
+![schedule](https://github.com/yuuzn/todayWhereGo/blob/master/%E6%9C%9F%E9%96%93%E3%82%92%E8%A6%8B%E6%A5%B5%E3%82%81%E3%82%8B.png "schedule") 
 * トレードオフ・スライダー　追々
 * 初回のリリースに必要なもの　追々
 
