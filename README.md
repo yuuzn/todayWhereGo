@@ -68,7 +68,7 @@
 * エレベーターピッチ　追々
 * パッケージデザイン　追々
 * やらないことリスト　◎
-![NotToDo](画像のURL "NotToDo") 
+![NotToDo](https://github.com/yuuzn/todayWhereGo/blob/master/%E3%82%84%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%83%AA%E3%82%B9%E3%83%88.png "NotToDo") 
 * プロジェクトコミュニティ　なし
 * 技術的な解決策の概要　◎
 * 夜も眠れなくなるような問題　随時
