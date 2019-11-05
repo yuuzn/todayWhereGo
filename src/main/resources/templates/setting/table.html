@@ -9,6 +9,40 @@
 </head>
 <body>
 行先候補登録しちゃう？
+<div class="container">
+		<h1>INDEX</h1>
+		<table class="table">
+			<tr>
+				<th>registration_order</th>
+				<th>user_code</th>
+				<th>destination_id</th>
+				<th>destination_name</th>
+				<th>destination_category_id</th>
+				<th>destination_region_id</th>
+				<th>destination_order</th>
+				<th class="edit">visit_count</th>
+				<th class="delete">evaluation_value</th>
+				<th class="edit">delete_flag</th>
+				<th class="delete">create_at</th>
+				<th class="delete">update_at</th>
+			</tr>
+			<tr th:each="destination: ${destination_candidates}">
+				<td th:text="${destination.registration_order}"></td>
+				<td th:text="${destination.user_code}"></td>
+				<td th:text="${destination.destination_id}"></td>
+				<td th:text="${destination.destination_name}"></td>
+				<td th:text="${destination.destination_category_id}"></td>
+				<td th:text="${destination.destination_region_id}"></td>
+				<td th:text="${destination.destination_order}"></td>
+				<td th:text="${destination.visit_count}"></td>
+				<td th:text="${destination.evaluation_value}"></td>
+				<td th:text="${destination.delete_flag}"></td>
+				<td th:text="${destination.create_at}"></td>
+				<td th:text="${destination.update_at}"></td>
+			</tr>
+		</table>
+		<a class="btn btn-default" href="/memo/new">新規作成</a>
+	</div>
 <br/>
 <a class="btn btn-default" href="/home/start">TopPageへ戻る</a>
 </body>

@@ -9,10 +9,10 @@ CREATE TABLE `destination_candidates` (
   `visit_count` int(11) DEFAULT NULL,
   `evaluation_value` int(11) DEFAULT NULL,
   `delete_flag` varchar(1) DEFAULT NULL,
-  `create_at` DATETIME DEFAULT NULL,
-  `update_at` DATETIME DEFAULT NULL
+  `create_at` Timestamp DEFAULT NULL,
+  `update_at` Timestamp DEFAULT NULL
 ) ;
 ALTER TABLE `destination_candidates`
   ADD PRIMARY KEY (`registration_order`,`user_code`,`destination_id`);
-
+create sequence hibernate_sequence start with 100 increment by 1;
 
