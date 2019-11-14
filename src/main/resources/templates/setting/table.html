@@ -8,8 +8,23 @@
 <script src="/js/bootstrap.js"></script>
 </head>
 <body>
-行先候補登録しちゃう？
-<div class="container">
+	<nav class="navbar navbar-dark bg-dark">
+		<a href="#" class="navbar-brand">行先候補登録</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navmenu1" aria-controls="navmenu1"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navmenu1">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="#">Menu#1</a> <a
+					class="nav-item nav-link" href="#">Menu#2</a> <a
+					class="nav-item nav-link" href="#">Menu#3</a>
+			</div>
+		</div>
+	</nav>
+	行先候補登録しちゃう？
+	<div class="container">
 		<h1>INDEX</h1>
 		<table class="table">
 			<tr>
@@ -41,9 +56,10 @@
 				<td th:text="${destination.update_at}"></td>
 			</tr>
 		</table>
-		<a class="btn btn-default" href="/memo/new">新規作成</a>
+		<a class="btn btn-primary" href="/memo/new">新規作成</a>
 	</div>
-<br/>
-<a class="btn btn-default" href="/home/start">TopPageへ戻る</a>
+	<br />
+	<a class="btn btn-primary" href="/home/start">TopPageへ戻る</a>
+	<footer class="card-footer">Since 2019</footer>
 </body>
 </html>
