@@ -6,60 +6,71 @@
 <link rel="stylesheet" href="/css/bootstrap.css" />
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.js"></script>
+<style type="text/css">
+.table {
+	table-layout: fixed;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+</style>
 </head>
 <body>
-	<nav class="navbar navbar-dark bg-dark">
-		<a href="#" class="navbar-brand">行先候補登録</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navmenu1" aria-controls="navmenu1"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navmenu1">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="#">Menu#1</a> <a
-					class="nav-item nav-link" href="#">Menu#2</a> <a
-					class="nav-item nav-link" href="#">Menu#3</a>
+	<div class="container-fluid">
+		<nav class="navbar navbar-dark bg-dark">
+			<a href="#" class="navbar-brand">行先候補登録</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navmenu1" aria-controls="navmenu1"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navmenu1">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="#">Menu#1</a> <a
+						class="nav-item nav-link" href="#">Menu#2</a> <a
+						class="nav-item nav-link" href="#">Menu#3</a>
+				</div>
+			</div>
+		</nav>
+		行先候補登録しちゃう？
+		<div class="col-sm-6">
+			<div class="row">
+				<h4>行先候補リスト</h4>
+				<table class="table table-striped"
+					style="font-size: 7pt; line-height: 100%;">
+					<tr>
+						<th>登録順</th>
+						<th>ユーザ</th>
+						<th>行先ID</th>
+						<th>行先名</th>
+						<th>行先カテゴリID</th>
+						<th>行先地域ID</th>
+						<th>行先表示順</th>
+						<th class="edit">訪問回数</th>
+						<th class="delete">評価値</th>
+						<th class="edit">削除フラグ</th>
+						<th class="delete">作成時刻</th>
+						<th class="delete">更新時刻</th>
+					</tr>
+					<tr th:each="destination: ${destination_candidates}">
+						<td th:text="${destination.registration_order}"></td>
+						<td th:text="${destination.user_code}"></td>
+						<td th:text="${destination.destination_id}"></td>
+						<td th:text="${destination.destination_name}"></td>
+						<td th:text="${destination.destination_category_id}"></td>
+						<td th:text="${destination.destination_region_id}"></td>
+						<td th:text="${destination.destination_order}"></td>
+						<td th:text="${destination.visit_count}"></td>
+						<td th:text="${destination.evaluation_value}"></td>
+						<td th:text="${destination.delete_flag}"></td>
+						<td th:text="${destination.create_at}"></td>
+						<td th:text="${destination.update_at}"></td>
+					</tr>
+				</table>
 			</div>
 		</div>
-	</nav>
-	行先候補登録しちゃう？
-	<div class="container">
-		<h1>INDEX</h1>
-		<table class="table">
-			<tr>
-				<th>registration_order</th>
-				<th>user_code</th>
-				<th>destination_id</th>
-				<th>destination_name</th>
-				<th>destination_category_id</th>
-				<th>destination_region_id</th>
-				<th>destination_order</th>
-				<th class="edit">visit_count</th>
-				<th class="delete">evaluation_value</th>
-				<th class="edit">delete_flag</th>
-				<th class="delete">create_at</th>
-				<th class="delete">update_at</th>
-			</tr>
-			<tr th:each="destination: ${destination_candidates}">
-				<td th:text="${destination.registration_order}"></td>
-				<td th:text="${destination.user_code}"></td>
-				<td th:text="${destination.destination_id}"></td>
-				<td th:text="${destination.destination_name}"></td>
-				<td th:text="${destination.destination_category_id}"></td>
-				<td th:text="${destination.destination_region_id}"></td>
-				<td th:text="${destination.destination_order}"></td>
-				<td th:text="${destination.visit_count}"></td>
-				<td th:text="${destination.evaluation_value}"></td>
-				<td th:text="${destination.delete_flag}"></td>
-				<td th:text="${destination.create_at}"></td>
-				<td th:text="${destination.update_at}"></td>
-			</tr>
-		</table>
-		<a class="btn btn-primary" href="/memo/new">新規作成</a>
+		<a class="btn btn-primary" href="/memo/new">新規作成</a> <br /> <a
+			class="btn btn-primary" href="/home/start">TopPageへ戻る</a>
+		<footer class="card-footer">Since 2019</footer>
 	</div>
-	<br />
-	<a class="btn btn-primary" href="/home/start">TopPageへ戻る</a>
-	<footer class="card-footer">Since 2019</footer>
 </body>
 </html>
